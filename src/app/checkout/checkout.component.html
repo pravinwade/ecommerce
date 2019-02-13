@@ -1,0 +1,92 @@
+<section class="mainContent clearfix stepsWrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="innerWrapper clearfix stepsPage">
+          <form #frmCheckout="ngForm" (ngSubmit)="UpdateUserDetails()" action="" class="row" method="POST" role="form">
+            <div class="col-12">
+              <div class="page-header">
+                <h4>Shipping Address</h4>
+              </div>
+            </div>
+            <div style="width:100%;">
+              <h3 class="form-group" style="color: red;">{{errorMsg}}</h3>
+            </div>
+            <div class="form-group col-md-6 col-12">
+              <label for="">First Name</label>
+              <input type="text" class="form-control" id="fname" name="fname" #fname="ngModel" [(ngModel)]="firstname">
+            </div>
+            <div class="form-group col-md-6 col-12">
+              <label for="">Middle Name</label>
+              <input type="text" class="form-control" id="mname" name="mname" #mname="ngModel" [(ngModel)]="middlename">
+            </div>
+            <div class="form-group col-md-6 col-12">
+              <label for="">Last Name</label>
+              <input type="text" class="form-control" id="lname" name="lname" #lname="ngModel" [(ngModel)]="lastname">
+            </div>
+            <div class="form-group col-md-6 col-12">
+              <label for="">Email</label>
+              <input type="email" class="form-control" id="emailid" name="emailid" #emailid="ngModel" [(ngModel)]="email">
+            </div>
+            <div class="form-group col-md-6 col-12">
+              <label for="">Address</label>
+              <input type="text" class="form-control" id="address" name="address" #address="ngModel" [(ngModel)]="addr">
+            </div>
+            <div class="form-group col-md-6 col-12">
+              <label for="">Phone</label>
+              <input type="text" class="form-control" id="phone" name="phone" #phone="ngModel" [(ngModel)]="mobile">
+            </div>
+            <div class="form-group col-md-6 col-12">
+              <label for="">Country</label>
+              <input type="text" class="form-control" id="country" name="country" #country="ngModel" [(ngModel)]="_country">
+            </div>
+            <div class="form-group col-md-6 col-12">
+              <label for="">State</label>
+              <input type="text" class="form-control" id="state" name="state" #state="ngModel" [(ngModel)]="_state">
+            </div>
+            <div class="form-group col-md-6 col-12">
+              <label for="">City</label>
+              <input type="text" class="form-control" id="city" name="city" #city="ngModel" [(ngModel)]="_city">
+            </div>
+            <div class="form-group col-md-6 col-12">
+              <label for="">Zip Code</label>
+              <input type="text" class="form-control" id="zip" name="zip" #zip="ngModel" [(ngModel)]="pincode">
+            </div>
+
+            <div class="col-12">
+              <div class="well well-lg clearfix">
+                  <button type="submit" class="btn btn-primary btn-default float-right" style="margin-right:2%;">Update User</button>
+                  <a class="btn btn-primary btn-default float-right" href="checkout-step-2.html" style="margin-right:2%;">Continue
+                      <i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="summery-box">
+          <h4>Order Summery</h4>
+          <!-- <p>Excepteur sint occaecat cupidat non proi dent sunt.officia.</p> -->
+          <ul class="list-unstyled">
+            <li class="d-flex justify-content-between">
+              <span class="tag">Subtotal</span>
+              <span class="val">Rs. <span id="spanamt" name="spanamt" #spanamt></span></span>
+            </li>
+            <!-- <li class="d-flex justify-content-between">
+              <span class="tag">Shipping & Handling</span>
+              <span class="val">$12.00 </span>
+            </li>
+            <li class="d-flex justify-content-between">
+              <span class="tag">Estimated Tax</span>
+              <span class="val">$0.00 </span>
+            </li> -->
+            <li class="d-flex justify-content-between">
+              <span class="tag">Total</span>
+              <span class="val">Rs. <span id="spanamt1" name="spanamt1" #spanamt1></span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
